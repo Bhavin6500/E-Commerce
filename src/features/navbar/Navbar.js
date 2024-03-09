@@ -2,8 +2,8 @@ import React from 'react';
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import ProductList from '../product-list/ProductList';
-
+import ProductList from '../product/components/ProductList';
+import { Link } from 'react-router-dom';
 const user = {
   name: 'Tom Cook',
   email: 'tom@example.com',
@@ -40,11 +40,11 @@ const Navbar = ({children}) => {
                 <div className="flex h-16 items-center justify-between">
                   <div className="flex items-center">
                     <div className="flex-shrink-0">
-                      <img
+                     <Link to ="/"> <img
                         className="h-8 w-8"
                         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                         alt="Your Company"
-                      />
+                      /></Link>
                     </div>
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
@@ -74,7 +74,7 @@ const Navbar = ({children}) => {
                       >
                         <span className="absolute -inset-1.5" />
                         <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
-
+ 
                       </button>
                       <span class="inline-flex items-center rounded-md mb-7 -ml-3 bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">+</span>
 

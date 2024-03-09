@@ -4,7 +4,7 @@ import {
   increment,
   incrementAsync,
   selectCount,
-} from './productListSlice';
+} from '../productListSlice';
 
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
